@@ -1,0 +1,15 @@
+<%-include("partials/header.ejs")%>
+
+<h1><%=home%></h1>
+<p><%=content%></p>
+
+<%global.forEach(function(gbl){%>
+   <h1> <%=gbl.data1 %> </h1>
+   <p> 
+   <%=gbl.data2.substring(0,100) + "..."%> 
+   <a href="/global/<%=gbl.data1%>">Read more</a>
+   </p>
+<%})%>
+
+
+<%-include("partials/footer.ejs")%>
